@@ -41,10 +41,18 @@ A premium, AI-powered tool to build and run simple text processing workflows. Bu
     npm install
     ```
 3.  **Set up Environment (Optional):**
-    Create a `.env.local` file to use real AI (otherwise runs in Mock Mode):
+    Create a `.env.local` file. You can use either **Hugging Face** (Primary) or **Google Gemini** (Secondary).
+    
     ```env
-    GEMINI_API_KEY=your_google_ai_key
+    # Option A: Hugging Face (Recommended)
+    HUGGING_FACE_API_KEY=your_hf_token
+    HUGGING_FACE_MODEL=mistralai/Mistral-7B-Instruct-v0.2
+    
+    # Option B: Google Gemini
+    GEMINI_API_KEY=your_google_key
     ```
+    *If no keys are provided, the app runs in **Mock Mode**.*
+
 4.  **Run the development server:**
     ```bash
     npm run dev
@@ -58,15 +66,17 @@ A premium, AI-powered tool to build and run simple text processing workflows. Bu
     ```
 2.  **Run the container:**
     ```bash
-    docker run -p 3000:3000 -e GEMINI_API_KEY=your_key workflow-builder-lite
+    docker run -p 3000:3000 -e HUGGING_FACE_API_KEY=your_token workflow-builder-lite
     ```
+    *(Or use `-e GEMINI_API_KEY=...`)*
 
 ## 📂 Project Structure
 -   `src/app/`: Next.js App Router pages (`page.tsx`, `history/`, `status/`).
 -   `src/lib/`:
-    -   `workflow-engine.ts`: Core logic for executing steps (Mock & Real AI).
+    -   `workflow-engine.ts`: Logic for executing steps (Hugging Face -> Gemini -> Mock).
     -   `types.ts`: TypeScript definitions.
 -   `data/`: Stores `history.json` for persistence (created automatically).
 
 ## 🤖 AI Logic & Mock Mode
-The application includes a robust **Mock Mode**. If no `GEMINI_API_KEY` is provided, the system simulates AI processing delays and returns realistic placeholder data, allowing users to test the full UI flow without an API key.
+The application includes a robust **Mock Mode**. If no API keys (`HUGGING_FACE_API_KEY` or `GEMINI_API_KEY`) are detected, the system simulates AI processing delays and returns realistic placeholder data. This allows users to test the UI flow instantly.
+

@@ -58,44 +58,91 @@ function cleanText(input: string): string {
 
 // Mock/Real LLM Implementations
 // In a real app, this would call the Gemini API
-async function summarizeText(input: string): Promise<string> {
-    const apiKey = process.env.GEMINI_API_KEY;
+// Hugging Face Inference API Implementation
+async function callHuggingFace(input: string, instruction: string): Promise<string> {
+    const apiKey = process.env.HUGGING_FACE_API_KEY;
+    const model = process.env.HUGGING_FACE_MODEL || "mistralai/Mistral-7B-Instruct-v0.2";
+
     if (!apiKey) {
-        await wait(MOCK_DELAY);
-        return `[MOCK SUMMARIZATION]\nThis is a simulated summary of the input text. The input was ${input.length} characters long. To get real summarization, please configure the GEMINI_API_KEY environment variable.`;
+        console.warn("No Hugging Face API key found.");
+        throw new Error("Missing HUGGING_FACE_API_KEY");
     }
 
-    // TODO: Implement actual Gemini call
-    return mockGeminiCall(input, "Summarize this text");
+    try {
+        const response = await fetch(`https://api-inference.huggingface.co/models/${model}`, {
+            headers: {
+                Authorization: `Bearer ${apiKey}`,
+                "Content-Type": "application/json",
+            },
+            method: "POST",
+            body: JSON.stringify({
+                inputs: `<s>[INST] ${instruction}:\n\n"${input}" [/INST]`,
+                parameters: {
+                    max_new_tokens: 500,
+                    return_full_text: false,
+                }
+            }),
+        });
+
+        if (!response.ok) {
+            throw new Error(`Hugging Face API Error: ${response.status} ${response.statusText}`);
+        }
+
+        const result = await response.json();
+        // Hugging Face usually returns an array of objects with 'generated_text'
+        if (Array.isArray(result) && result.length > 0 && result[0].generated_text) {
+            return result[0].generated_text.trim();
+        } else if (typeof result === 'object' && result.generated_text) {
+            return result.generated_text.trim();
+        }
+
+        return JSON.stringify(result);
+
+    } catch (error) {
+        console.error("Hugging Face API call failed:", error);
+        throw error;
+    }
+}
+
+// Unified LLM Caller (Prioritizes Hugging Face, falls back to Mock)
+async function callLLM(input: string, prompt: string): Promise<string> {
+    // 1. Try Hugging Face
+    if (process.env.HUGGING_FACE_API_KEY) {
+        try {
+            return await callHuggingFace(input, prompt);
+        } catch (e) {
+            console.error("Hugging Face failed, falling back to mock.", e);
+        }
+    }
+
+    // 2. Try Gemini (Legacy/Alternative)
+    if (process.env.GEMINI_API_KEY) {
+        try {
+            return await mockGeminiCall(input, prompt);
+        } catch (e) {
+            console.error("Gemini failed, falling back to mock.", e);
+        }
+    }
+
+    // 3. Fallback to Mock
+    await wait(MOCK_DELAY);
+    return `[MOCK MODE] (No valid API Key found)\nFor: ${prompt}\nInput length: ${input.length} chars`;
+}
+
+async function summarizeText(input: string): Promise<string> {
+    return callLLM(input, "Please summarize the following text concisely");
 }
 
 async function extractKeyPoints(input: string): Promise<string> {
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) {
-        await wait(MOCK_DELAY);
-        return `[MOCK KEY POINTS]\n- Point 1: The input text discusses...\n- Point 2: Key theme appears to be...\n- Point 3: It mentions specific details about...`;
-    }
-    return mockGeminiCall(input, "Extract key points from this text");
+    return callLLM(input, "Extract the main key points from the following text as a bulleted list");
 }
 
 async function analyzeSentiment(input: string): Promise<string> {
-    const apiKey = process.env.GEMINI_API_KEY;
-    if (!apiKey) {
-        await wait(MOCK_DELAY);
-        return `[MOCK SENTIMENT]\nSentiment: Positive\nConfidence: 85%\n\nThe text generally conveys a constructive tone.`;
-    }
-    return mockGeminiCall(input, "Analyze the sentiment of this text");
+    return callLLM(input, "Analyze the sentiment of the following text (Positive, Negative, or Neutral) and explain why");
 }
 
+// Deprecated direct Gemini call - kept for backward compatibility if needed internally
 async function mockGeminiCall(input: string, prompt: string): Promise<string> {
-    // Placeholder for actual API call logic if we were to implement it right here
-    // For now, even with a key, we might need the library installed.
-    // Since we can't guarantee 'npm install' is done, we'll keep this simple.
-
-    // NOTE: If we want real LLM, we should use the Google Generative AI SDK
-    // import { GoogleGenerativeAI } from "@google/generative-ai";
-    // For this prototype, we will stick to the mock or a simple fetch if needed.
-
     try {
         const { GoogleGenerativeAI } = require("@google/generative-ai");
         const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
@@ -105,8 +152,6 @@ async function mockGeminiCall(input: string, prompt: string): Promise<string> {
         const response = await result.response;
         return response.text();
     } catch (e) {
-        console.error("Gemini API call failed, falling back to mock", e);
-        await wait(MOCK_DELAY);
-        return `[FALLBACK MOCK] API Call Failed. ${prompt} -> Result for input length ${input.length}`;
+        throw e;
     }
 }
