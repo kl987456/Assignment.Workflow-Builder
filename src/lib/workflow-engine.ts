@@ -99,7 +99,8 @@ async function mockGeminiCall(input: string, prompt: string): Promise<string> {
     try {
         const { GoogleGenerativeAI } = require("@google/generative-ai");
         const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-        const model = genAI.getGenerativeModel({ model: "gemini-pro" });
+        const modelName = process.env.GEMINI_MODEL || "gemini-pro";
+        const model = genAI.getGenerativeModel({ model: modelName });
         const result = await model.generateContent(`${prompt}:\n\n${input}`);
         const response = await result.response;
         return response.text();
