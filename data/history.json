@@ -1,0 +1,50 @@
+[
+  {
+    "id": "cc94718a-c6fa-407b-b344-07abe790605a",
+    "timestamp": "2026-02-11T17:49:39.909Z",
+    "steps": [
+      {
+        "stepId": "0df3e674-b089-42da-a3dc-184c38888d31",
+        "stepType": "extract_key_points",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "[MOCK KEY POINTS]\n- Point 1: The input text discusses...\n- Point 2: Key theme appears to be...\n- Point 3: It mentions specific details about...",
+        "status": "success",
+        "durationMs": 1295
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "584074d2-6b0b-4701-877b-166d77ec8527",
+    "timestamp": "2026-02-11T17:44:16.332Z",
+    "steps": [
+      {
+        "stepId": "487bdd44-753f-47fa-964f-8435eb0af899",
+        "stepType": "summarize",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "[MOCK SUMMARIZATION]\nThis is a simulated summary of the input text. The input was 278 characters long. To get real summarization, please configure the GEMINI_API_KEY environment variable.",
+        "status": "success",
+        "durationMs": 1013
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "48f504f4-e259-40b8-8758-1abcc506773e",
+    "timestamp": "2026-02-11T17:42:48.631Z",
+    "steps": [
+      {
+        "stepId": "3d4d1695-a80a-483f-b8c5-9b09483b9240",
+        "stepType": "clean_text",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity. We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "status": "success",
+        "durationMs": 555
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  }
+]
