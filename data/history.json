@@ -1,5 +1,21 @@
 [
   {
+    "id": "5b7f46d8-6bdb-41e8-b5db-494460787283",
+    "timestamp": "2026-02-11T18:15:56.961Z",
+    "steps": [
+      {
+        "stepId": "0df3e674-b089-42da-a3dc-184c38888d31",
+        "stepType": "extract_key_points",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "[MOCK MODE] (No valid API Key found)\nFor: Extract the main key points from the following text as a bulleted list\nInput length: 278 chars",
+        "status": "success",
+        "durationMs": 1034
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
     "id": "cc94718a-c6fa-407b-b344-07abe790605a",
     "timestamp": "2026-02-11T17:49:39.909Z",
     "steps": [

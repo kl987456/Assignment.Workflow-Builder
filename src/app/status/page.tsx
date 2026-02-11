@@ -48,7 +48,7 @@ export default function StatusPage() {
                 <div className="space-y-4 relative z-10">
                     <StatusItem label="Backend Services" status={status?.backend} />
                     <StatusItem label="Data Storage" status={status?.database} />
-                    <StatusItem label="AI Engine (Gemini)" status={status?.llm} />
+                    <StatusItem label="AI Engine" status={status?.llm} />
                 </div>
 
                 <div className="mt-8 pt-6 border-t border-white/10 text-xs text-center text-slate-500">
@@ -70,10 +70,10 @@ function StatusItem({ label, status }: { label: string; status?: string }) {
     let icon = '•';
     let statusText = status || 'Unknown';
 
-    if (status === 'healthy' || status === 'connected' || status === 'configured') {
+    if (status === 'healthy' || status === 'connected' || status?.startsWith('configured')) {
         colorClass = 'bg-green-500/10 text-green-400 border-green-500/20 shadow-[0_0_10px_rgba(74,222,128,0.1)]';
         icon = '✔';
-    } else if (status === 'missing_key' || status === 'init_required') {
+    } else if (status === 'missing_key_mock_mode' || status === 'init_required') {
         colorClass = 'bg-amber-500/10 text-amber-400 border-amber-500/20';
         icon = '⚠';
     } else if (status === 'error') {
@@ -86,7 +86,7 @@ function StatusItem({ label, status }: { label: string; status?: string }) {
             <span className="font-medium text-slate-300">{label}</span>
             <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold tracking-wide border ${colorClass}`}>
                 <span>{icon}</span>
-                <span className="capitalize">{statusText.replace('_', ' ')}</span>
+                <span className="capitalize">{statusText.replace('_', ' ').replace('configured', 'Active:')}</span>
             </span>
         </div>
     );
