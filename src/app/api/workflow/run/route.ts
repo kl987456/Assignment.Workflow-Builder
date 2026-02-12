@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { executeWorkflowStep } from '@/lib/workflow-engine';
 import { WorkflowStep, WorkflowRunResult, WorkflowStepResult } from '@/lib/types';
-// import { v4 as uuidv4 } from 'uuid'; // Removed unused dependency
+import logger from '@/lib/logger';
 import fs from 'fs';
 import path from 'path';
 
@@ -20,7 +20,7 @@ async function saveRunToHistory(run: WorkflowRunResult) {
             try {
                 history = JSON.parse(fileContent);
             } catch (e) {
-                console.error("Failed to parse history file", e);
+                logger.error("Failed to parse history file", { error: (e as Error).message });
                 history = [];
             }
         }
@@ -35,7 +35,7 @@ async function saveRunToHistory(run: WorkflowRunResult) {
 
         fs.writeFileSync(historyFile, JSON.stringify(history, null, 2));
     } catch (error) {
-        console.error("Failed to save history", error);
+        logger.error("Failed to save history", { error: (error as Error).message });
     }
 }
 
@@ -57,17 +57,27 @@ export async function POST(req: NextRequest) {
         let currentInput = inputText;
         let workflowStatus: 'success' | 'failed' | 'augment_failed' = 'success';
 
+        logger.info(`Initialized workflow execution`, { runId, stepsCount: steps.length });
+
         // Execute steps sequentially
         for (const step of steps) {
+            const stepStart = Date.now();
             const result = await executeWorkflowStep(step, currentInput);
             stepResults.push(result);
 
+            logger.info(`Step execution result`, {
+                runId,
+                stepType: step.type,
+                status: result.status,
+                durationMs: Date.now() - stepStart
+            });
+
             if (result.status === 'failed') {
                 workflowStatus = 'failed';
-                break; // Stop execution on failure
+                logger.error(`Workflow execution halted`, { runId, stepType: step.type });
+                break;
             }
 
-            // Output of this step becomes input of next step
             currentInput = result.output;
         }
 
@@ -76,7 +86,8 @@ export async function POST(req: NextRequest) {
             timestamp: new Date().toISOString(),
             steps: stepResults,
             status: workflowStatus,
-            originalInput: inputText
+            originalInput: inputText,
+            durationMs: stepResults.reduce((acc, s) => acc + s.durationMs, 0)
         };
 
         // Save to history asynchronously
@@ -84,7 +95,7 @@ export async function POST(req: NextRequest) {
 
         return NextResponse.json(runResult);
     } catch (error) {
-        console.error("Workflow execution error", error);
+        logger.error("Workflow execution error", { error: (error as Error).message });
         return NextResponse.json({ error: 'Internal server error' }, { status: 500 });
     }
 }

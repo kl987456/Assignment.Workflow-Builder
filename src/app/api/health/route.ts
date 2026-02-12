@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import fs from 'fs';
 import path from 'path';
 
+import logger from '@/lib/logger';
+
 export async function GET() {
   const healthStatus = {
     backend: 'healthy',
@@ -21,7 +23,7 @@ export async function GET() {
       healthStatus.database = 'connected';
     }
   } catch (error) {
-    console.error("Database check failed", error);
+    logger.error("Database check failed", { error: (error as Error).message });
     healthStatus.database = 'error';
   }
 

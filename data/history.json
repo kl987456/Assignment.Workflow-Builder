@@ -1,5 +1,470 @@
 [
   {
+    "id": "1dca6d8b-705e-4575-a276-3ee41a3eb031",
+    "timestamp": "2026-02-12T16:29:46.252Z",
+    "steps": [
+      {
+        "stepId": "114ffde9-17ef-4bbb-9e30-993bc01b007e",
+        "stepType": "extract_action_items",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "1. [ ] [MOCK] Task 1: Verify API Key\n2. [ ] [MOCK] Task 2: Review system logs",
+        "status": "success",
+        "durationMs": 4469
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+    "durationMs": 4469
+  },
+  {
+    "id": "ad9c6acf-14dc-413f-85d4-dff14f3ace26",
+    "timestamp": "2026-02-12T16:24:45.076Z",
+    "steps": [
+      {
+        "stepId": "5df7762e-9051-4dfe-ba5c-55f8091af764",
+        "stepType": "rewrite_polite",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "**Tone Shift:** More formal and diplomatic\n\n[MOCK] This is a professionally polished version of your input text (length 278). The Communications Director Agent has refined the tone for maximum impact.",
+        "status": "success",
+        "durationMs": 3805
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "0c9ca014-b01a-4d1e-a41d-3bac220373c8",
+    "timestamp": "2026-02-12T16:22:19.026Z",
+    "steps": [
+      {
+        "stepId": "5d1a64d8-5f6c-4f36-a8ad-dd92c82a538f",
+        "stepType": "clean_text",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity. We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "status": "success",
+        "durationMs": 518
+      },
+      {
+        "stepId": "7802025d-8f5c-4c39-b9aa-f1d12702e08b",
+        "stepType": "extract_action_items",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity. We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "1. [ ] [MOCK] Task 1: Verify API Key\n2. [ ] [MOCK] Task 2: Review system logs",
+        "status": "success",
+        "durationMs": 4853
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "dc5d3420-6734-4031-b34a-f0cea89700ab",
+    "timestamp": "2026-02-12T16:21:25.376Z",
+    "steps": [
+      {
+        "stepId": "5d1a64d8-5f6c-4f36-a8ad-dd92c82a538f",
+        "stepType": "clean_text",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity. We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "status": "success",
+        "durationMs": 524
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "1efa2cad-723a-4d4c-a7bd-e7eea3c60f6c",
+    "timestamp": "2026-02-12T16:16:58.180Z",
+    "steps": [
+      {
+        "stepId": "8d6df9f7-1e8d-4986-8e87-5d4fcf9b8dc7",
+        "stepType": "extract_action_items",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "Failed to extract action items: Failed to generate valid ActionItems after 2 attempts. Last error: [\n  {\n    \"expected\": \"array\",\n    \"code\": \"invalid_type\",\n    \"path\": [\n      \"actions\"\n    ],\n    \"message\": \"Invalid input: expected array, received undefined\"\n  }\n]",
+        "status": "success",
+        "durationMs": 6299
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "9d014ebf-1695-4d1b-878c-25a1c6a7a559",
+    "timestamp": "2026-02-12T16:12:47.157Z",
+    "steps": [
+      {
+        "stepId": "10aef3ed-cf9b-40b5-b569-1a217cb4a558",
+        "stepType": "extract_action_items",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "No specific action items detected.",
+        "status": "success",
+        "durationMs": 20150
+      },
+      {
+        "stepId": "c2141537-609a-4399-aca8-ba1551eda3ac",
+        "stepType": "rewrite_polite",
+        "input": "No specific action items detected.",
+        "output": "**Tone Shift:** More formal and diplomatic\n\n[MOCK] This is a professionally polished version of your input text (length 34). The Communications Director Agent has refined the tone for maximum impact.",
+        "status": "success",
+        "durationMs": 1398
+      },
+      {
+        "stepId": "df699950-dd00-4069-aed3-78e16fd0194b",
+        "stepType": "extract_key_points",
+        "input": "**Tone Shift:** More formal and diplomatic\n\n[MOCK] This is a professionally polished version of your input text (length 34). The Communications Director Agent has refined the tone for maximum impact.",
+        "output": "• [MOCK] Strategic Insight 1: The system is currently operating in simulation mode.\n• [MOCK] Strategic Insight 2: Connect a valid API key to unlock full neural processing capabilities.",
+        "status": "success",
+        "durationMs": 1370
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "6a112f10-0da8-4688-b1a8-fe7b292ac202",
+    "timestamp": "2026-02-12T16:11:24.551Z",
+    "steps": [
+      {
+        "stepId": "10aef3ed-cf9b-40b5-b569-1a217cb4a558",
+        "stepType": "extract_action_items",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "No specific action items detected.",
+        "status": "success",
+        "durationMs": 2716
+      },
+      {
+        "stepId": "c2141537-609a-4399-aca8-ba1551eda3ac",
+        "stepType": "rewrite_polite",
+        "input": "No specific action items detected.",
+        "output": "**Tone Shift:** From a blunt, direct, and informal statement to a professional, diplomatic, and formally objective observation.\n\nAt this juncture, specific and actionable items have not been explicitly delineated.",
+        "status": "success",
+        "durationMs": 6949
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "f442323f-97bf-4568-a659-97b42553ee79",
+    "timestamp": "2026-02-12T16:09:53.522Z",
+    "steps": [
+      {
+        "stepId": "10aef3ed-cf9b-40b5-b569-1a217cb4a558",
+        "stepType": "extract_action_items",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "No specific action items detected.",
+        "status": "success",
+        "durationMs": 3108
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "2fd1296f-9089-41e0-8fef-2f720501aad8",
+    "timestamp": "2026-02-12T16:06:16.318Z",
+    "steps": [
+      {
+        "stepId": "00ebc85a-9181-4a93-87a3-f3b885b33f06",
+        "stepType": "clean_text",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity. We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "status": "success",
+        "durationMs": 525
+      },
+      {
+        "stepId": "0eb89ea5-ba40-4e53-af44-50de65f891e7",
+        "stepType": "summarize",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity. We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "Google DeepMind is a team of scientists and engineers dedicated to solving intelligence to advance science and benefit humanity. They achieve this by combining machine learning and systems neuroscience to develop powerful general-purpose learning algorithms.",
+        "status": "success",
+        "durationMs": 3080
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "537e0bdb-45d8-47fc-8225-e1797b5774e1",
+    "timestamp": "2026-02-12T16:06:03.074Z",
+    "steps": [
+      {
+        "stepId": "00ebc85a-9181-4a93-87a3-f3b885b33f06",
+        "stepType": "clean_text",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity. We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "status": "success",
+        "durationMs": 556
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "3007037b-7794-4f54-8ab4-621fa2caa52f",
+    "timestamp": "2026-02-12T15:54:44.259Z",
+    "steps": [
+      {
+        "stepId": "95df49ce-0542-4521-b89d-c95f538e41b0",
+        "stepType": "summarize",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "Google DeepMind combines machine learning and neuroscience to build powerful general-purpose learning algorithms, aiming to solve intelligence for the advancement of science and the benefit of humanity.",
+        "status": "success",
+        "durationMs": 4447
+      },
+      {
+        "stepId": "b7fa9cb9-8f09-4e24-a099-ced5c9f28e2f",
+        "stepType": "analyze_sentiment",
+        "input": "Google DeepMind combines machine learning and neuroscience to build powerful general-purpose learning algorithms, aiming to solve intelligence for the advancement of science and the benefit of humanity.",
+        "output": "**Sentiment:** Positive\n**Confidence:** 0.98\n\nThe text expresses a highly positive and aspirational sentiment. Phrases like 'powerful general-purpose learning algorithms,' 'aiming to solve intelligence,' 'advancement of science,' and 'benefit of humanity' all convey a strong sense of purpose, innovation, and positive societal impact. There are no negative or neutral elements present; the focus is entirely on ambitious, beneficial, and forward-thinking goals.",
+        "status": "success",
+        "durationMs": 8343
+      },
+      {
+        "stepId": "c8563f64-2235-4faa-8823-60f57b2dc0f6",
+        "stepType": "extract_key_points",
+        "input": "**Sentiment:** Positive\n**Confidence:** 0.98\n\nThe text expresses a highly positive and aspirational sentiment. Phrases like 'powerful general-purpose learning algorithms,' 'aiming to solve intelligence,' 'advancement of science,' and 'benefit of humanity' all convey a strong sense of purpose, innovation, and positive societal impact. There are no negative or neutral elements present; the focus is entirely on ambitious, beneficial, and forward-thinking goals.",
+        "output": "• The core technological focus is on developing powerful general-purpose learning algorithms.\n• The primary, highly ambitious objective is to 'solve intelligence'.\n• The overarching mission is driven by a commitment to the advancement of science and the benefit of humanity.\n• The strategic direction is characterized by ambitious, beneficial, and forward-thinking goals.\n• The prevailing sentiment and communication tone are highly positive and aspirational.",
+        "status": "success",
+        "durationMs": 5150
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "0be7bda4-ee0a-4f73-a734-35d9633aa675",
+    "timestamp": "2026-02-12T15:52:58.783Z",
+    "steps": [
+      {
+        "stepId": "95df49ce-0542-4521-b89d-c95f538e41b0",
+        "stepType": "summarize",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "[MOCK] Executive Briefing: The input text (length 278) was received. Due to missing credentials, the Executive Briefer Agent generated this placeholder to demonstrate workflow continuity.",
+        "status": "success",
+        "durationMs": 11784
+      },
+      {
+        "stepId": "b7fa9cb9-8f09-4e24-a099-ced5c9f28e2f",
+        "stepType": "analyze_sentiment",
+        "input": "[MOCK] Executive Briefing: The input text (length 278) was received. Due to missing credentials, the Executive Briefer Agent generated this placeholder to demonstrate workflow continuity.",
+        "output": "**Sentiment:** Neutral\n**Confidence:** N/A\n\nThe text describes a factual, procedural event. While it mentions a problem ('missing credentials'), the action taken ('generated this placeholder') is presented as a pragmatic solution to achieve a neutral, process-oriented goal ('demonstrate workflow continuity'). There are no discernible emotional tones of joy, frustration, anger, or excitement. The language is purely informational and detached, focusing on system status and workflow.",
+        "status": "success",
+        "durationMs": 10388
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "fe5ce21e-c074-48f1-88cd-07fa74a75887",
+    "timestamp": "2026-02-12T15:50:22.840Z",
+    "steps": [
+      {
+        "stepId": "95df49ce-0542-4521-b89d-c95f538e41b0",
+        "stepType": "summarize",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "Google DeepMind combines machine learning and systems neuroscience to develop powerful general-purpose learning algorithms, aiming to solve intelligence to advance science and benefit humanity.",
+        "status": "success",
+        "durationMs": 5315
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "6985c06e-ce36-49ab-a805-0c663a59a5e8",
+    "timestamp": "2026-02-12T15:43:18.558Z",
+    "steps": [
+      {
+        "stepId": "c1ac8783-b1dd-404e-bddf-7e8c9ccdcf69",
+        "stepType": "summarize",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "[MOCK] Executive Briefing: The input text (length 278) was received. Due to missing credentials, the Executive Briefer Agent generated this placeholder to demonstrate workflow continuity.",
+        "status": "success",
+        "durationMs": 12850
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "514eebe0-3321-4ebd-b626-32e4a6aa707e",
+    "timestamp": "2026-02-11T18:55:40.249Z",
+    "steps": [
+      {
+        "stepId": "cbdc6072-07c4-4290-81a5-87aa417b13d0",
+        "stepType": "analyze_sentiment",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "**Sentiment:** Positive\n\n**Explanation:**\n\nThe text is overwhelmingly positive due to several key phrases and words:\n\n1.  **\"committed to solving intelligence to advance science and benefit humanity.\"**: This is a powerful mission statement using strongly positive words like \"committed,\" \"advance science,\" and especially \"benefit humanity.\" These phrases indicate noble goals and a dedication to positive impact.\n2.  **\"combine the best techniques\"**: The use of the superlative \"best\" implies high quality, effectiveness, and a pursuit of excellence.\n3.  **\"build powerful general-purpose learning algorithms\"**: \"Powerful\" in this context suggests capability, innovation, and effectiveness, which are positive attributes for a scientific endeavor.\n\nThere are no negative or neutral words; the language consistently portrays a group with admirable goals, strong capabilities, and a clear vision for positive outcomes.",
+        "status": "success",
+        "durationMs": 5749
+      },
+      {
+        "stepId": "c9de9318-839f-46f8-8431-c5aec7e955f3",
+        "stepType": "summarize",
+        "input": "**Sentiment:** Positive\n\n**Explanation:**\n\nThe text is overwhelmingly positive due to several key phrases and words:\n\n1.  **\"committed to solving intelligence to advance science and benefit humanity.\"**: This is a powerful mission statement using strongly positive words like \"committed,\" \"advance science,\" and especially \"benefit humanity.\" These phrases indicate noble goals and a dedication to positive impact.\n2.  **\"combine the best techniques\"**: The use of the superlative \"best\" implies high quality, effectiveness, and a pursuit of excellence.\n3.  **\"build powerful general-purpose learning algorithms\"**: \"Powerful\" in this context suggests capability, innovation, and effectiveness, which are positive attributes for a scientific endeavor.\n\nThere are no negative or neutral words; the language consistently portrays a group with admirable goals, strong capabilities, and a clear vision for positive outcomes.",
+        "output": "This text explains why another text exhibits an \"overwhelmingly positive\" sentiment. It identifies key phrases like \"benefit humanity,\" \"best techniques,\" and \"powerful general-purpose learning algorithms\" as evidence, which consistently convey noble goals, a pursuit of excellence, and strong capabilities without any negative or neutral language.",
+        "status": "success",
+        "durationMs": 5650
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "ac8cd24c-4282-46b3-9084-50e1882c6d33",
+    "timestamp": "2026-02-11T18:55:16.875Z",
+    "steps": [
+      {
+        "stepId": "cbdc6072-07c4-4290-81a5-87aa417b13d0",
+        "stepType": "analyze_sentiment",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "**Sentiment:** Positive\n\n**Explanation:**\n\nThe text uses several words and phrases that convey a clear and strong positive sentiment about Google Deepmind's mission and methods:\n\n*   **\"committed to solving intelligence to advance science and benefit humanity\"**: This directly states a highly altruistic and beneficial purpose, using very positive terms like \"advance science\" and \"benefit humanity.\" The word \"committed\" also implies dedication to these good causes.\n*   **\"best techniques\"**: This suggests high quality, effectiveness, and a pursuit of excellence in their methodology.\n*   **\"powerful general-purpose learning algorithms\"**: While \"powerful\" could sometimes have negative connotations, in this context (following \"advance science and benefit humanity\"), it implies effective tools designed to achieve positive outcomes.\n\nThere are no negative or neutral words or phrases that detract from this overwhelmingly positive framing of their work.",
+        "status": "success",
+        "durationMs": 6259
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "d88ab63d-8f45-4ab8-95f6-bd3755202117",
+    "timestamp": "2026-02-11T18:53:44.688Z",
+    "steps": [
+      {
+        "stepId": "2df84cc7-9cb3-4c16-9f6b-782aaac9f276",
+        "stepType": "summarize",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "[MOCK MODE] (No valid API Key found)\nFor: Please summarize the following text concisely\nInput length: 278 chars",
+        "status": "success",
+        "durationMs": 3520
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "76b26f77-b314-4a02-8784-2d3b12d3ff70",
+    "timestamp": "2026-02-11T18:45:59.973Z",
+    "steps": [
+      {
+        "stepId": "ceb62051-a983-41c7-a09e-3064ff95db28",
+        "stepType": "summarize",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "[MOCK MODE] (No valid API Key found)\nFor: Please summarize the following text concisely\nInput length: 278 chars",
+        "status": "success",
+        "durationMs": 3440
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "db810c69-72dd-45c3-abe4-47c59181547a",
+    "timestamp": "2026-02-11T18:44:14.202Z",
+    "steps": [
+      {
+        "stepId": "491e62ca-2810-45e8-b2c1-2645007647e3",
+        "stepType": "summarize",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "[MOCK MODE] (No valid API Key found)\nFor: Please summarize the following text concisely\nInput length: 278 chars",
+        "status": "success",
+        "durationMs": 3176
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "0eb06014-f8f1-4eae-a092-dd4b042e9a15",
+    "timestamp": "2026-02-11T18:42:45.833Z",
+    "steps": [
+      {
+        "stepId": "5d0c7cc7-b467-445c-ab6f-039148604fa1",
+        "stepType": "clean_text",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity. We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "status": "success",
+        "durationMs": 505
+      },
+      {
+        "stepId": "981047f0-ee6a-453b-89c5-803dc6cf45b7",
+        "stepType": "summarize",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity. We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "[MOCK MODE] (No valid API Key found)\nFor: Please summarize the following text concisely\nInput length: 273 chars",
+        "status": "success",
+        "durationMs": 2003
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "e0eec641-6c26-4358-a061-b65900bfce1f",
+    "timestamp": "2026-02-11T18:42:37.686Z",
+    "steps": [
+      {
+        "stepId": "5d0c7cc7-b467-445c-ab6f-039148604fa1",
+        "stepType": "clean_text",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity. We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "status": "success",
+        "durationMs": 515
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "a32bb191-f76b-4d2c-bac0-952926141357",
+    "timestamp": "2026-02-11T18:42:28.941Z",
+    "steps": [
+      {
+        "stepId": "8e1ea7ae-9d32-4138-bea9-261599531fcf",
+        "stepType": "summarize",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "[MOCK MODE] (No valid API Key found)\nFor: Please summarize the following text concisely\nInput length: 278 chars",
+        "status": "success",
+        "durationMs": 2714
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "2e5dd6b0-9483-40d8-8819-8ae937f1be81",
+    "timestamp": "2026-02-11T18:41:39.606Z",
+    "steps": [
+      {
+        "stepId": "8e1ea7ae-9d32-4138-bea9-261599531fcf",
+        "stepType": "summarize",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "[MOCK MODE] (No valid API Key found)\nFor: Please summarize the following text concisely\nInput length: 278 chars",
+        "status": "success",
+        "durationMs": 3475
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
+    "id": "7881089d-0a6b-4563-b355-6d74c9596728",
+    "timestamp": "2026-02-11T18:40:12.105Z",
+    "steps": [
+      {
+        "stepId": "c8362ac4-a389-4f8e-a0ce-458c3ef8d1d9",
+        "stepType": "summarize",
+        "input": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms.",
+        "output": "[MOCK MODE] (No valid API Key found)\nFor: Please summarize the following text concisely\nInput length: 278 chars",
+        "status": "success",
+        "durationMs": 3543
+      }
+    ],
+    "status": "success",
+    "originalInput": "Google Deepmind is a team of scientists, engineers, and ethicists committed to solving intelligence to advance science and benefit humanity.\n\n    We combine the best techniques from machine learning and systems neuroscience to build powerful general-purpose learning algorithms."
+  },
+  {
     "id": "5b7f46d8-6bdb-41e8-b5db-494460787283",
     "timestamp": "2026-02-11T18:15:56.961Z",
     "steps": [
