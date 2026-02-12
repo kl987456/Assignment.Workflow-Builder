@@ -1,4 +1,4 @@
-# CORTEX PRIME v3.0 | Workflow Builder
+# CORTEX PRIME v3.1 | Workflow Builder
 
 A high-end, AI-powered agent orchestration terminal designed to build and run complex text processing pipelines. Built with Next.js 14, Tailwind CSS, Framer Motion, and multi-LLM support (Gemini & Hugging Face).
 
